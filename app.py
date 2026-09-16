@@ -278,9 +278,9 @@ def call_api(messages, temperature=0.7, max_tokens=2048):
     return None
 
 
-def stream_response(messages):
+def stream_response(messages, temperature=0.7, max_tokens=2048):
     """流式输出 API 回答，返回完整文本。"""
-    response = call_api(messages)
+    response = call_api(messages, temperature=temperature, max_tokens=max_tokens)
     if response is None:
         return None
 
